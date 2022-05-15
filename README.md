@@ -162,19 +162,41 @@ Once you have these libraries installed, running our scripts is just the same as
 ### Architecture : 
 ![Architecture](Images/Architecture.png)
 ### Results :  
-#### Binary and Multi-class Classification
+### Binary and Multi-class Classification :
 ![Binary Classification](Images/1.png)
 ![Multi-class Classification](Images/2.png)
 - The CPU Base model(with no optimization) performs the worst in both Binary and Multiclass Classification as expected
 - As we can see that in Multi-Class Classification, the Dilbert dataset’s accuracy is very low. We infer that 60 mins was not sufficient for the frameworks to search for the best model given that the number of features in Dilbert is very high(2000).
 - In Binary Classification H20 outperforms other AutoML libraries, whereas AutoKeras doesn’t yield the bet performance in Multi-Class Classification which can be attributed to the limited number of epochs to run
 - Amongst all GPUs the frameworks achieve the best accuracy on P100 for Binary whereas in multiclass it performs the best in RTX8000 under the 60 min constraint.
+
+### Regrssion :
 ![Regression](Images/3.png)
+- Again, similar to Binary and Multi-class Classification , In regression the CPU baseline model performs the worst
+- H20 and AutoWEKA outperform other AUTOML libraries
+- In terms of GPU performance, in P100, every library show the least MSE under 60 min constraint
+
+### Performance On P100, V100 & RTX8000 GPUs for Binary and Multi-class Classification
 ![P100 Binary Classification and Multi-class Classification](Images/4.png)
 ![V100 Binary Classification and Multi-class Classification](Images/5.png)
 ![RTX8000 Binary Classification and Multi-class Classification](Images/6.png)
+- The above three images show the performance of different autoML libraries, on different types of datasets on P100, V100 and RTX8000 GPUs for Binary and MultiClass classifications
+- As we can there is no considerable difference between the best performance of different autoML libraries under P100, V100 and RTX8000 GPUs. 
+- Given faster GPUs all algorithm seem to find the best model, here in this case it is P100,
+    - For example Autokeras almost matches the performance of H20 in P100, whereas in V100 it is far off. Similarly between V100 and RTX8000, Autokeras seems to perform better on V100 than RTX8000.
+- In P100, for binary classification tasks H2O framework seems to perform better than other frameworks whereas for multi-class classification tasks, Autokeras seems to perform better than other frameworks. 
+- In V100, H2O framework seems to perform better than other frameworks for both binary and multi-class classification tasks.
+- In RTX8000, autoWEKA framework outperforms other frameworks in both binary and multi-class classification tasks.
+
+### Performance On P100, V100 & RTX8000 GPUs for Regression
 ![P100 Regression](Images/7.png)
 ![V100 Regression](Images/8.png)
 ![RTX8000 Regression](Images/9.png)
+- The above three images show the performance of different autoML libraries, on different types of datasets on P100, V100 and RTX8000 GPUs for regression tasks
+- As we can there is no considerable difference between the best performance of different autoML libraries under P100, V100 and RTX8000 GPUs. 
+- Given faster GPUs all algorithm seem to find the best model, here in this case it is P100,
+    - For example Autokeras almost matches the performance of H20 in P100, whereas in V100 it is far off. Similarly between V100 and RTX8000, Autokeras seems to perform better on V100 than RTX8000.
+- In all three GPUs, autokeras framework seems to perform the worst, compared to other frameworks for regression tasks.
+- In all three GPUs, autoWEKA framework outperforms other frameworks in regression tasks.
 
 
