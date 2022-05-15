@@ -159,6 +159,33 @@ Once you have these libraries installed, running our scripts is just the same as
 - Tesla V100
 - Nvdia RTX8000
 
+### Steps Followed
+- Selection of different datasets that represents the task in hand from OpenML
+    - Binary Classification : Spambase, Adult, Australia
+    - Multi-Class Classification : Covertype, Dilbert, Cars
+    - Regression : Boston House Pricing, Stock prices, Puma8NH
+- Perform data preprocessing for the collected datasets
+    - Fetch OpenML datasets using sklearn.datasets.fetch_openml function
+    - Drop rows with missing and NAN values
+    - Convert categorical variables into numerical using pandas factorize method
+    - For H2O, convert the dataframe into a H2O frame using h2o.H2OFrame method
+- Choosing insightful performance metrics that are widely supported
+    - Task Based Metrics
+        - Binary Classification : Accuracy
+        - Multi-Class Classification : Accuracy
+        - Regression : Mean Squared Error
+    - Framework Based Metrics
+        - Time to Train : 1 Hour
+        - Auto-Keras : choose number of epochs such that it runs for 1 Hour approximately
+- Building a simple model for different tasks as a baseline benchmark
+    - Binary and Multi-Class Classification : Built a random forest classifier from the sklearn library
+    - Regression : Built a Linear Regression Model from the sklearn library
+- Benchmark the performance of the AutoML libraries provided above against each other and with the baseline model
+    - Compare and contrast their accuracy for a given GPU using scatterplot
+    - Compare their performance across different GPUs for a given task using scatterplot
+
+
+
 ### Architecture : 
 ![Architecture](Images/Architecture.png)
 ### Results :  
