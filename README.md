@@ -10,127 +10,194 @@ We aim to juxtapose the performance of AutoML libraries on different GPUs.
 ### Repository Structure :
 ```
 AutoML-Comparison
-|   README.md
-|
-+---Dataset
-|       csv_result-dataset_44_spambase.csv
-|
-\---IPYNB
-    +---Binary
-    |   +---Autokeras
-    |   |   +---collab
-    |   |   |       Autokeras_adult_collab.ipynb
-    |   |   |       Autokeras_australian_collab.ipynb
-    |   |   |       Autokeras_spam_collab.ipynb
-    |   |   |
-    |   |   +---rtx8000
-    |   |   |       Autokeras_adult_rtx8000.ipynb
-    |   |   |       Autokeras_australian_rtx8000.ipynb
-    |   |   |       Autokeras_spam_rtx8000.ipynb
-    |   |   |
-    |   |   \---v100
-    |   |           Autokeras_adult_v100.ipynb
-    |   |           Autokeras_australian_v100.ipynb
-    |   |           Autokeras_spam_v100.ipynb
-    |   |
-    |   +---Autosklearn
-    |   |   \---rtx8000
-    |   |           AutoSklean_adult_rtx8000.ipynb
-    |   |           AutoSklean_australian_rtx8000.ipynb
-    |   |           AutoSklean_Spam_rtx8000.ipynb
-    |   |
-    |   \---tpot
-    |       +---collab
-    |       |       tpot_adult_collab.ipynb
-    |       |       tpot_australian_collab.ipynb
-    |       |       tpot_spam_collab.ipynb
-    |       |
-    |       +---rtx8000
-    |       |       tpot_adult_rtx8000.ipynb
-    |       |       tpot_australian_rtx8000.ipynb
-    |       |       tpot_spam_rtx8000.ipynb
-    |       |
-    |       \---v100
-    |               tpot_adult_v100.ipynb
-    |               tpot_australian_v100.ipynb
-    |               tpot_spam_v100.ipynb
-    |
-    +---Multi-Class
-    |   +---Autokeras
-    |   |   +---collab
-    |   |   |       Autokeras_car_collab.ipynb
-    |   |   |       Autokeras_covertype_collab.ipynb
-    |   |   |       Autokeras_dilbert_collab.ipynb
-    |   |   |
-    |   |   +---rtx8000
-    |   |   |       Autokeras_car_rtx8000.ipynb
-    |   |   |       Autokeras_covertype_rtx8000.ipynb
-    |   |   |       Autokeras_dilbert_rtx8000.ipynb
-    |   |   |
-    |   |   \---v100
-    |   |           Autokeras_car_v100.ipynb
-    |   |           Autokeras_covertype_v100.ipynb
-    |   |           Autokeras_dilbert_v100.ipynb
-    |   |
-    |   +---Autosklearn
-    |   |       AutoSklean_car_collab.ipynb
-    |   |       AutoSklean_covertype_collab.ipynb
-    |   |       AutoSklean_dilbert_collab.ipynb
-    |   |
-    |   \---tpot
-    |       +---collab
-    |       |       tpot_car_colab.ipynb
-    |       |       tpot_covertype_colab.ipynb
-    |       |       tpot_dilbert_colab.ipynb
-    |       |
-    |       +---rtx8000
-    |       |       tpot_car_rtx8000.ipynb
-    |       |       tpot_covertype_rtx8000.ipynb
-    |       |       tpot_dilbert_rtx8000.ipynb
-    |       |
-    |       \---v100
-    |               tpot_car_v100.ipynb
-    |               tpot_covertype_v100.ipynb
-    |               tpot_dilbert_v100.ipynb
-    |
-    \---Regression
-        +---Autokeras
-        |   +---collab
-        |   |       Autokeras_boston_collab.ipynb
-        |   |       Autokeras_puma8nh_collab.ipynb
-        |   |       Autokeras_stock_collab.ipynb
-        |   |
-        |   +---rtx8000
-        |   |       Autokeras_boston_rtx8000-mse.ipynb
-        |   |       Autokeras_puma8nh_rtx8000.ipynb
-        |   |       Autokeras_stock_rtx8000.ipynb
-        |   |
-        |   \---v100
-        |           Autokeras_boston_v100-mse.ipynb
-        |           Autokeras_puma8nh_v100.ipynb
-        |           Autokeras_stock_v100.ipynb
-        |
-        +---Autosklearn
-        |       AutoSklean_boston_collab.ipynb
-        |       AutoSklean_puma8nh_collab.ipynb
-        |       AutoSklean_STOCK_collab.ipynb
-        |
-        \---tpot
-            +---collab
-            |       tpot_boston_colab
-            |       tpot_PUMA8NH_collab.ipynb
-            |       tpot_stock_colab.ipynb
-            |
-            +---rtx8000
-            |       tpot_boston_rtx8000.ipynb
-            |       tpot_PUMA8NH_rtx8000.ipynb
-            |       tpot_stock_rtx8000.ipynb
-            |
-            \---v100
-                    tpot_boston_v100.ipynb
-                    tpot_PUMA8NH_v100.ipynb
-                    tpot_stock_v100.ipynb
-
+.
+├── Dataset
+│   ├── Binary Classification
+│   │   ├── adult.arff
+│   │   ├── australian.arff
+│   │   └── csv_result-dataset_44_spambase.csv
+│   ├── Multi-Class Classification
+│   │   ├── car.arff
+│   │   └── covertype.arff.zip
+│   └── Regression
+│       ├── boston.arff
+│       ├── puma8NH.arff
+│       └── stock.arff
+├── IPYNB
+│   ├── Baseline
+│   │   ├── H20AutoMLBoston.ipynb
+│   │   └── H20AutoMLPuma.ipynb
+│   ├── Binary
+│   │   ├── Autokeras
+│   │   │   ├── collab
+│   │   │   │   ├── Autokeras_adult_collab.ipynb
+│   │   │   │   ├── Autokeras_australian_collab.ipynb
+│   │   │   │   └── Autokeras_spam_collab.ipynb
+│   │   │   ├── rtx8000
+│   │   │   │   ├── Autokeras_adult_rtx8000.ipynb
+│   │   │   │   ├── Autokeras_australian_rtx8000.ipynb
+│   │   │   │   └── Autokeras_spam_rtx8000.ipynb
+│   │   │   └── v100
+│   │   │       ├── Autokeras_adult_v100.ipynb
+│   │   │       ├── Autokeras_australian_v100.ipynb
+│   │   │       └── Autokeras_spam_v100.ipynb
+│   │   ├── Autosklearn
+│   │   │   └── rtx8000
+│   │   │       ├── AutoSklean_Spam_rtx8000.ipynb
+│   │   │       ├── AutoSklean_adult_rtx8000.ipynb
+│   │   │       └── AutoSklean_australian_rtx8000.ipynb
+│   │   ├── Baseline
+│   │   │   ├── H20AutoMLAdult.ipynb
+│   │   │   ├── H20AutoMLAustralian.ipynb
+│   │   │   └── H20AutoMLSpamBase.ipynb
+│   │   ├── H2O
+│   │   │   ├── collab
+│   │   │   │   ├── H20AutoMLAdult.ipynb
+│   │   │   │   ├── H20AutoMLAustralian.ipynb
+│   │   │   │   └── H20AutoMLSpamBase.ipynb
+│   │   │   ├── rtx8000
+│   │   │   │   ├── H20AutoMLAdult.ipynb
+│   │   │   │   ├── H20AutoMLAustralian.ipynb
+│   │   │   │   └── H20AutoMLSpambase.ipynb
+│   │   │   └── v100
+│   │   │       ├── H20AutoMLAdult-v100.ipynb
+│   │   │       ├── H20AutoMLAustralian-v100.ipynb
+│   │   │       └── H20AutoMLSpambase-v100.ipynb
+│   │   └── tpot
+│   │       ├── collab
+│   │       │   ├── tpot_adult_collab.ipynb
+│   │       │   ├── tpot_australian_collab.ipynb
+│   │       │   └── tpot_spam_collab.ipynb
+│   │       ├── rtx8000
+│   │       │   ├── tpot_adult_rtx8000.ipynb
+│   │       │   ├── tpot_australian_rtx8000.ipynb
+│   │       │   └── tpot_spam_rtx8000.ipynb
+│   │       └── v100
+│   │           ├── tpot_adult_v100.ipynb
+│   │           ├── tpot_australian_v100.ipynb
+│   │           └── tpot_spam_v100.ipynb
+│   ├── Graph Plots.ipynb
+│   ├── H2O
+│   │   ├── collab
+│   │   │   ├── H20AutoMLBoston.ipynb
+│   │   │   ├── H20AutoMLPuma.ipynb
+│   │   │   └── H20AutoMLStock.ipynb
+│   │   ├── rtx8000
+│   │   │   ├── H20AutoMLboston.ipynb
+│   │   │   ├── H20AutoMLpuma.ipynb
+│   │   │   └── H20AutoMLstock.ipynb
+│   │   └── v100
+│   │       ├── H20AutoMLboston-v100.ipynb
+│   │       └── H20AutoMLstock-v100.ipynb
+│   ├── Multi-Class
+│   │   ├── Autokeras
+│   │   │   ├── collab
+│   │   │   │   ├── Autokeras_car_collab.ipynb
+│   │   │   │   ├── Autokeras_covertype_collab.ipynb
+│   │   │   │   └── Autokeras_dilbert_collab.ipynb
+│   │   │   ├── rtx8000
+│   │   │   │   ├── Autokeras_car_rtx8000.ipynb
+│   │   │   │   ├── Autokeras_covertype_rtx8000.ipynb
+│   │   │   │   └── Autokeras_dilbert_rtx8000.ipynb
+│   │   │   └── v100
+│   │   │       ├── Autokeras_car_v100.ipynb
+│   │   │       ├── Autokeras_covertype_v100.ipynb
+│   │   │       └── Autokeras_dilbert_v100.ipynb
+│   │   ├── Autosklearn
+│   │   │   ├── AutoSklean_car_collab.ipynb
+│   │   │   ├── AutoSklean_covertype_collab.ipynb
+│   │   │   └── AutoSklean_dilbert_collab.ipynb
+│   │   ├── Baseline
+│   │   │   ├── H20AutoMLDilbert.ipynb
+│   │   │   ├── H20AutoMLcar.ipynb
+│   │   │   └── H20AutoMLcovertype.ipynb
+│   │   ├── H2O
+│   │   │   ├── collab
+│   │   │   │   ├── H20AutoMLDilbert.ipynb
+│   │   │   │   ├── H20AutoMLcar.ipynb
+│   │   │   │   └── H20AutoMLcovertype.ipynb
+│   │   │   ├── rtx8000
+│   │   │   │   ├── H20AutoMLcar.ipynb
+│   │   │   │   ├── H20AutoMLcovertype.ipynb
+│   │   │   │   └── H20AutoMLdilbert.ipynb
+│   │   │   └── v100
+│   │   │       ├── H20AutoMLcar-v100.ipynb
+│   │   │       ├── H20AutoMLcovertype-v100.ipynb
+│   │   │       └── H20AutoMLdilbert-v100.ipynb
+│   │   └── tpot
+│   │       ├── collab
+│   │       │   ├── tpot_car_colab.ipynb
+│   │       │   ├── tpot_covertype_colab.ipynb
+│   │       │   └── tpot_dilbert_colab.ipynb
+│   │       ├── rtx8000
+│   │       │   ├── tpot_car_rtx8000.ipynb
+│   │       │   ├── tpot_covertype_rtx8000.ipynb
+│   │       │   └── tpot_dilbert_rtx8000.ipynb
+│   │       └── v100
+│   │           ├── tpot_car_v100.ipynb
+│   │           ├── tpot_covertype_v100.ipynb
+│   │           └── tpot_dilbert_v100.ipynb
+│   └── Regression
+│       ├── Autokeras
+│       │   ├── collab
+│       │   │   ├── Autokeras_boston_collab.ipynb
+│       │   │   ├── Autokeras_puma8nh_collab.ipynb
+│       │   │   └── Autokeras_stock_collab.ipynb
+│       │   ├── rtx8000
+│       │   │   ├── Autokeras_boston_rtx8000-mse.ipynb
+│       │   │   ├── Autokeras_puma8nh_rtx8000.ipynb
+│       │   │   └── Autokeras_stock_rtx8000.ipynb
+│       │   └── v100
+│       │       ├── Autokeras_boston_v100-mse.ipynb
+│       │       ├── Autokeras_puma8nh_v100.ipynb
+│       │       └── Autokeras_stock_v100.ipynb
+│       ├── Autosklearn
+│       │   ├── AutoSklean_STOCK_collab.ipynb
+│       │   ├── AutoSklean_boston_collab.ipynb
+│       │   └── AutoSklean_puma8nh_collab.ipynb
+│       └── tpot
+│           ├── collab
+│           │   ├── tpot_PUMA8NH_collab.ipynb
+│           │   ├── tpot_boston_colab
+│           │   └── tpot_stock_colab.ipynb
+│           ├── rtx8000
+│           │   ├── tpot_PUMA8NH_rtx8000.ipynb
+│           │   ├── tpot_boston_rtx8000.ipynb
+│           │   └── tpot_stock_rtx8000.ipynb
+│           └── v100
+│               ├── tpot_PUMA8NH_v100.ipynb
+│               ├── tpot_boston_v100.ipynb
+│               └── tpot_stock_v100.ipynb
+├── Images
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   ├── 4.png
+│   ├── 5.png
+│   ├── 6.png
+│   ├── 7.png
+│   ├── 8.png
+│   ├── 9.png
+│   ├── Architecture.png
+│   └── WekaRuns
+│       ├── adult.png
+│       ├── airlines.png
+│       ├── boston.png
+│       ├── covertype.png
+│       ├── covertype1.png
+│       ├── dilbert.png
+│       └── spambase.png
+├── README.md
+└── results
+    ├── BinaryClassification.csv
+    ├── MultiClassClassification.csv
+    ├── Regression.csv
+    ├── colabR.csv
+    ├── colabbcmc.csv
+    ├── rtx8000R.csv
+    ├── rtx8000bcmc.csv
+    ├── v100R.csv
+    └── v100bcmc.csv
 ```
 ### AutoML Libraries :
 The AutoML libraries that we use 

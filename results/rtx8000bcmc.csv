@@ -1,0 +1,25 @@
+Task,GPU,Framework,Dataset,Accuracy
+Binary Classification,RTX8000,Auto-Keras,Spambase,0.9365
+Binary Classification,RTX8000,Tpot,Spambase,0.9791
+Binary Classification,RTX8000,H2O,Spambase,0.9994
+Binary Classification,RTX8000,auto-WEKA,Spambase,0.9843
+Binary Classification,RTX8000,Auto-Keras,Adult,0.8359
+Binary Classification,RTX8000,Tpot,Adult,0.8562
+Binary Classification,RTX8000,H2O,Adult,0.7298
+Binary Classification,RTX8000,auto-WEKA,Adult,0.8623
+Binary Classification,RTX8000,Auto-Keras,Australia,0.7572
+Binary Classification,RTX8000,Tpot,Australia,0.8728
+Binary Classification,RTX8000,H2O,Australia,0.9671
+Binary Classification,RTX8000,auto-WEKA,Australia,0.9812
+Multi-Class Classification,RTX8000,Auto-Keras,Cars,0.9884
+Multi-Class Classification,RTX8000,Tpot,Cars,0.9675
+Multi-Class Classification,RTX8000,H2O,Cars,0.9953
+Multi-Class Classification,RTX8000,auto-WEKA,Cars,0.9967
+Multi-Class Classification,RTX8000,Auto-Keras,Covertype,0.741
+Multi-Class Classification,RTX8000,Tpot,Covertype,0.6266
+Multi-Class Classification,RTX8000,H2O,Covertype,0.7458
+Multi-Class Classification,RTX8000,auto-WEKA,Covertype,0.7546
+Multi-Class Classification,RTX8000,Auto-Keras,Dilbert,0.2177
+Multi-Class Classification,RTX8000,Tpot,Dilbert,0.2312
+Multi-Class Classification,RTX8000,H2O,Dilbert,0.2152
+Multi-Class Classification,RTX8000,auto-WEKA,Dilbert,0.2246
