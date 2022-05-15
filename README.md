@@ -132,18 +132,34 @@ AutoML-Comparison
                     tpot_stock_v100.ipynb
 
 ```
-### Run our scripts :
-Make sure you have the following libraries installed :
+### AutoML Libraries :
+The AutoML libraries that we use 
 - AutoKeras
 - Auto-sklearn
 - Tpot
 - H2O
+- AutoWEKA  
 
+To install the above libraries
 ### Installation :
 - Autokeras :  `pip install autokeras`  
 - Auto-sklearn : `pip install auto-sklearn`  
 - Tpot : `pip install Tpot`  
 - H2O : `pip install h2o`  
+
+### Tasks Comparison :
+- Binary Classification
+- Multiclass Classification
+- Regression
+
+### GPUs Used for Comparison :
+- Tesla P100
+- Tesla V100
+- Nvdia RTX8000
+
+### Architecture : 
+![Architecture](Images/Architecture.png)
+### Results :
 
 
 Once you have these libraries installed, running our scripts is just the same as running a jupyter notebook.
