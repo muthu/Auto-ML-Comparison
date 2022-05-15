@@ -1,4 +1,9 @@
 ### Auto ML Comparison :
+Choosing and Optimizing Machine Learning model is a laborious and time intensive task which requires broad mastery.
+The field of AutoML is centered around automizing this task. It accelerate this process allowing professionals to free up time for other valuable tasks.
+It is emerging and gaining widespread acceptance.
+No universally best AutoML approach.
+Our solution focuses mainly on helping the practitioners select the right autoML tools for the right tasks by comparing and contrasting their performance on different datasets, and architectures
 We compare and constrast the performance of different AutoML frameworks on different tasks such as Binary Classification, Multi-Class classification, Regression.
 We aim to juxtapose the performance of AutoML libraries on different GPUs.
 
@@ -127,3 +132,22 @@ AutoML-Comparison
                     tpot_stock_v100.ipynb
 
 ```
+### Run our scripts :
+Make sure you have the following libraries installed :
+- AutoKeras
+- Auto-sklearn
+- Tpot
+- H2O
+
+### Installation :
+Autokeras:
+`pip install autokeras`
+Auto-sklearn
+`pip install auto-sklearn`
+Tpot
+`pip install Tpot`
+H2O
+`pip install h2o`
+
+
+Once you have these libraries installed, running our scripts is just the same as running a jupyter notebook.
