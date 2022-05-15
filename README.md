@@ -3,7 +3,7 @@ We compare and constrast the performance of different AutoML frameworks on diffe
 We aim to juxtapose the performance of AutoML libraries on different GPUs.
 
 ### Repository Structure :
-'
+```
 AutoML-Comparison
 |   README.md
 |
@@ -126,4 +126,4 @@ AutoML-Comparison
                     tpot_PUMA8NH_v100.ipynb
                     tpot_stock_v100.ipynb
 
-'
+```
