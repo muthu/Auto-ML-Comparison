@@ -140,14 +140,10 @@ Make sure you have the following libraries installed :
 - H2O
 
 ### Installation :
-Autokeras:  
-`pip install autokeras`  
-Auto-sklearn  
-`pip install auto-sklearn`  
-Tpot  
-`pip install Tpot`  
-H2O  
-`pip install h2o`  
+- Autokeras :  `pip install autokeras`  
+- Auto-sklearn : `pip install auto-sklearn`  
+- Tpot : `pip install Tpot`  
+- H2O : `pip install h2o`  
 
 
 Once you have these libraries installed, running our scripts is just the same as running a jupyter notebook.
