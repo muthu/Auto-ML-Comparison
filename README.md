@@ -147,6 +147,8 @@ To install the above libraries
 - Tpot : `pip install Tpot`  
 - H2O : `pip install h2o`  
 
+Once you have these libraries installed, running our scripts is just the same as running a jupyter notebook/ colab.
+
 ### Tasks Comparison :
 - Binary Classification
 - Multiclass Classification
@@ -159,7 +161,20 @@ To install the above libraries
 
 ### Architecture : 
 ![Architecture](Images/Architecture.png)
-### Results :
+### Results :  
+#### Binary and Multi-class Classification
+![Binary Classification](Images/1.png)
+![Multi-class Classification](Images/2.png)
+- The CPU Base model(with no optimization) performs the worst in both Binary and Multiclass Classification as expected
+- As we can see that in Multi-Class Classification, the Dilbert dataset’s accuracy is very low. We infer that 60 mins was not sufficient for the frameworks to search for the best model given that the number of features in Dilbert is very high(2000).
+- In Binary Classification H20 outperforms other AutoML libraries, whereas AutoKeras doesn’t yield the bet performance in Multi-Class Classification which can be attributed to the limited number of epochs to run
+- Amongst all GPUs the frameworks achieve the best accuracy on P100 for Binary whereas in multiclass it performs the best in RTX8000 under the 60 min constraint.
+![Regression](Images/3.png)
+![P100 Binary Classification and Multi-class Classification](Images/4.png)
+![V100 Binary Classification and Multi-class Classification](Images/5.png)
+![RTX8000 Binary Classification and Multi-class Classification](Images/6.png)
+![P100 Regression](Images/7.png)
+![V100 Regression](Images/8.png)
+![RTX8000 Regression](Images/9.png)
 
 
-Once you have these libraries installed, running our scripts is just the same as running a jupyter notebook.
