@@ -1,0 +1,13 @@
+Task,GPU,Framework,Dataset,MSE
+Regression,RTX8000,Auto-Keras,boston,4690.73
+Regression,RTX8000,Tpot,boston,2637.44
+Regression,RTX8000,H2O,boston,2742.34
+Regression,RTX8000,auto-WEKA,boston,2547.23
+Regression,RTX8000,Auto-Keras,PUMA8NH,89.323
+Regression,RTX8000,Tpot,PUMA8NH,2.1772
+Regression,RTX8000,H2O,PUMA8NH,4.58
+Regression,RTX8000,auto-WEKA,PUMA8NH,3.63
+Regression,RTX8000,Auto-Keras,stock,1567.96
+Regression,RTX8000,Tpot,stock,884.23
+Regression,RTX8000,H2O,stock,820.13
+Regression,RTX8000,auto-WEKA,stock,898.23

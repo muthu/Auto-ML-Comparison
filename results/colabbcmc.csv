@@ -1,0 +1,25 @@
+Task,GPU,Framework,Dataset,Accuracy
+Binary Classification,P100,Auto-Keras,Spambase,0.9974
+Binary Classification,P100,Tpot,Spambase,0.9748
+Binary Classification,P100,H2O,Spambase,0.9548
+Binary Classification,P100,auto-WEKA,Spambase,0.9923
+Binary Classification,P100,Auto-Keras,Adult,0.8284
+Binary Classification,P100,Tpot,Adult,0.8562
+Binary Classification,P100,H2O,Adult,0.8747
+Binary Classification,P100,auto-WEKA,Adult,0.8426
+Binary Classification,P100,Auto-Keras,Australia,0.7861
+Binary Classification,P100,Tpot,Australia,0.8612
+Binary Classification,P100,H2O,Australia,0.9961
+Binary Classification,P100,auto-WEKA,Australia,0.8753
+Multi-Class Classification,P100,Auto-Keras,Cars,0.9745
+Multi-Class Classification,P100,Tpot,Cars,0.9837
+Multi-Class Classification,P100,H2O,Cars,0.9938
+Multi-Class Classification,P100,auto-WEKA,Cars,0.9947
+Multi-Class Classification,P100,Auto-Keras,Covertype,0.7412
+Multi-Class Classification,P100,Tpot,Covertype,0.6266
+Multi-Class Classification,P100,H2O,Covertype,0.5181
+Multi-Class Classification,P100,auto-WEKA,Covertype,0.5789
+Multi-Class Classification,P100,Auto-Keras,Dilbert,0.1976
+Multi-Class Classification,P100,Tpot,Dilbert,0.218
+Multi-Class Classification,P100,H2O,Dilbert,0.2274
+Multi-Class Classification,P100,auto-WEKA,Dilbert,0.2124

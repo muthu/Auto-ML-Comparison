@@ -1,0 +1,13 @@
+Task,GPU,Framework,Dataset,Accuracy
+Regression,P100,Auto-Keras,boston,4343.3
+Regression,P100,Tpot,boston,2653.35
+Regression,P100,H2O,boston,2436.24
+Regression,P100,auto-WEKA,boston,2367.12
+Regression,P100,Auto-Keras,PUMA8NH,99.231
+Regression,P100,Tpot,PUMA8NH,3.14
+Regression,P100,H2O,PUMA8NH,4.32
+Regression,P100,auto-WEKA,PUMA8NH,3.97
+Regression,P100,Auto-Keras,stock,1527.41
+Regression,P100,Tpot,stock,860.23
+Regression,P100,H2O,stock,790.46
+Regression,P100,auto-WEKA,stock,850.21
