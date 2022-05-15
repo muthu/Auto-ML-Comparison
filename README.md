@@ -226,4 +226,9 @@ Once you have these libraries installed, running our scripts is just the same as
 - In all three GPUs, autokeras framework seems to perform the worst, compared to other frameworks for regression tasks.
 - In all three GPUs, autoWEKA framework outperforms other frameworks in regression tasks.
 
+### Observations
+- We have compared and contrasted different AutoML frameworks and their performance on various GPUs and trained them for 60 minutes each. The current results already highlight several avenues for further AutoML research.
+- There is no strong discriminator amongst the different AutoML libraries.
+- As we saw on datasets like covertype and dilbert, high dimensional or high multiclass problems are challenging.
+- Even though there were no out performances by the AutoML library on a particular GPU, our experiments show that in micro-level they perform better in P100 GPU.
 
