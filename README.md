@@ -16,3 +16,13 @@ project
     │   file021.txt
     │   file022.txt
 ```
+
+### Run our scripts :
+Make sure you have the following libraries installed :
+- AutoKeras
+- Auto-sklearn
+- Tpot
+- H2O
+
+Once you have these libraries installed, running our scripts is just the same as running a jupyter notebook.
+
